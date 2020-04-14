@@ -6,6 +6,12 @@ the tool expects data to be one column per item (e.g., a survey question). see `
 
 ### usage
 
+the tool is written in javascript and uses the [node.js runtime](https://nodejs.org/). install it with npm, node's microsoft-owned package manager:
+
+```
+npm install -g csv-to-boxplot
+```
+
 exemplary usage: run `# cat test.csv | csv-to-boxplot > boxplot.txt` in your terminal. in your TeX document, import the data as follows:
 
 ```tex
