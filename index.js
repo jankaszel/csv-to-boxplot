@@ -1,6 +1,6 @@
 const { median, quantileSeq } = require('mathjs')
 
-module.exports = function transform (rows) {
+module.exports = function process (rows) {
   return rows.map((row, index) => {
     const values = row
       .map(value => Number.parseFloat(value))

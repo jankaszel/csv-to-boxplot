@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 const split = require('split')
-const transform = require('./')
+const process = require('./')
 
-if (process.argv[2] !== '-t') {
-  console.log('Usage: # csv-to-boxplot [-t]. Use `-t` to transform from stdout to stdin. Will expect a header line.')
+if (process.argv.length > 2) {
+  console.log('Usage: # cat test.csv | csv-to-boxplot > boxplot.txt')
   process.exit(1)
 }
 
@@ -38,11 +38,11 @@ function main () {
   process.stdin.pipe(split())
     .on('data', data => rows.push(data.split(',')))
     .on('end', () => {
-      const transformed = transform(
+      const processed = process(
         transpose(rows.slice(1))
       )
 
-      for (const row of transformed) {
+      for (const row of processed) {
         process.stdout.write(`${seq(row).join(' ')}\n`)
       }
     })

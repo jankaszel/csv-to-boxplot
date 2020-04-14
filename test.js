@@ -1,7 +1,7 @@
 const test = require('tape')
-const transform = require('./')
+const process = require('./')
 
-test('JSON output test', function (t) {
+test('process', function (t) {
   const actual = [
     [25, 28, 29, 29, 30, 34, 35, 35, 37, 38],
     [50, 50, 55, 58, 63, 66, 66, 67, 67, 68, 69, 70, 70, 70, 70, 72, 73, 75, 75, 76, 76, 78, 79, 81],
@@ -17,7 +17,7 @@ test('JSON output test', function (t) {
 
   t.plan(1 + actual.length)
 
-  const received = transform(actual)
+  const received = process(actual)
   t.equal(received.length, actual.length)
 
   for (let i = 0; i < received.length; i++) {
