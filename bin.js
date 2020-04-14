@@ -43,7 +43,7 @@ function main () {
       )
 
       for (const row of transformed) {
-        process.stdout.write(`${seq(row)}\n`)
+        process.stdout.write(`${seq(row).join(' ')}\n`)
       }
     })
 }
