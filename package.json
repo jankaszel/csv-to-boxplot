@@ -2,7 +2,7 @@
   "name": "csv-to-boxplot",
   "version": "0.1.0",
   "author": "Jan Kaßel <jan@kassel.works>",
-  "description": "Transform CSV row-based values into PGF-suited values for boxplot visualization",
+  "description": "process CSV row-based values into PGF-suited values for boxplot visualization",
   "main": "index.js",
   "scripts": {
     "test": "standard && node test.js"
